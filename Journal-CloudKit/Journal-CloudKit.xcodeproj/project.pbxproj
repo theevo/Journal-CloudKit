@@ -14,6 +14,7 @@
 		AC18BEBC24329698009D0E6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC18BEBA24329698009D0E6A /* LaunchScreen.storyboard */; };
 		AC18BEC6243296AD009D0E6A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC18BEC5243296AD009D0E6A /* CloudKit.framework */; };
 		AC18BECA24329AE4009D0E6A /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC18BEC924329AE4009D0E6A /* Entry.swift */; };
+		AC18BECD2432A9F4009D0E6A /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC18BECC2432A9F4009D0E6A /* EntryController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		AC18BEC3243296A8009D0E6A /* Journal-CloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Journal-CloudKit.entitlements"; sourceTree = "<group>"; };
 		AC18BEC5243296AD009D0E6A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		AC18BEC924329AE4009D0E6A /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		AC18BECC2432A9F4009D0E6A /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		AC18BEAE24329696009D0E6A /* Journal-CloudKit */ = {
 			isa = PBXGroup;
 			children = (
+				AC18BECB2432A7D9009D0E6A /* Controllers */,
 				AC18BEC824329AD0009D0E6A /* Model */,
 				AC18BEB524329696009D0E6A /* Main.storyboard */,
 				AC18BEC7243296D0009D0E6A /* Resources */,
@@ -95,6 +98,14 @@
 				AC18BEC924329AE4009D0E6A /* Entry.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AC18BECB2432A7D9009D0E6A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC18BECC2432A9F4009D0E6A /* EntryController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +181,7 @@
 			files = (
 				AC18BECA24329AE4009D0E6A /* Entry.swift in Sources */,
 				AC18BEB024329696009D0E6A /* AppDelegate.swift in Sources */,
+				AC18BECD2432A9F4009D0E6A /* EntryController.swift in Sources */,
 				AC18BEB224329696009D0E6A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
