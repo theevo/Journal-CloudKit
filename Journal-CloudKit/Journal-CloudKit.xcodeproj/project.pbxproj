@@ -15,6 +15,7 @@
 		AC18BEC6243296AD009D0E6A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC18BEC5243296AD009D0E6A /* CloudKit.framework */; };
 		AC18BECA24329AE4009D0E6A /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC18BEC924329AE4009D0E6A /* Entry.swift */; };
 		AC18BECD2432A9F4009D0E6A /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC18BECC2432A9F4009D0E6A /* EntryController.swift */; };
+		AC18BED12432B201009D0E6A /* EntryListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC18BED02432B201009D0E6A /* EntryListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		AC18BEC5243296AD009D0E6A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		AC18BEC924329AE4009D0E6A /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		AC18BECC2432A9F4009D0E6A /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
+		AC18BED02432B201009D0E6A /* EntryListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +65,9 @@
 		AC18BEAE24329696009D0E6A /* Journal-CloudKit */ = {
 			isa = PBXGroup;
 			children = (
+				AC18BED22432B209009D0E6A /* Storyboard */,
 				AC18BECB2432A7D9009D0E6A /* Controllers */,
 				AC18BEC824329AD0009D0E6A /* Model */,
-				AC18BEB524329696009D0E6A /* Main.storyboard */,
 				AC18BEC7243296D0009D0E6A /* Resources */,
 			);
 			path = "Journal-CloudKit";
@@ -103,9 +105,34 @@
 		AC18BECB2432A7D9009D0E6A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AC18BECC2432A9F4009D0E6A /* EntryController.swift */,
+				AC18BECF2432B1E3009D0E6A /* View Controllers */,
+				AC18BECE2432B1D7009D0E6A /* Model Controller */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AC18BECE2432B1D7009D0E6A /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC18BECC2432A9F4009D0E6A /* EntryController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		AC18BECF2432B1E3009D0E6A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC18BED02432B201009D0E6A /* EntryListTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AC18BED22432B209009D0E6A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				AC18BEB524329696009D0E6A /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC18BECA24329AE4009D0E6A /* Entry.swift in Sources */,
+				AC18BED12432B201009D0E6A /* EntryListTableViewController.swift in Sources */,
 				AC18BEB024329696009D0E6A /* AppDelegate.swift in Sources */,
 				AC18BECD2432A9F4009D0E6A /* EntryController.swift in Sources */,
 				AC18BEB224329696009D0E6A /* SceneDelegate.swift in Sources */,
