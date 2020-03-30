@@ -13,7 +13,7 @@ This app is designed to allow you to further develop your understanding of MVC, 
 ### Enabling CloudKit Capabilities
 * On  your project file navigate to ‘Signing and Capabilities’ 
 * Setup your container and edit the name to reflect your Bundle Identifier
-* Open CloudKit dashboard to insure the container was created successfully
+* Open CloudKit dashboard to ensure the container was created successfully
 ​
 ### Model
 * Create your custom model object with the properties: title, body and timestamp. NOTE: you will need to build an extension to properly format your Date… reference previous projects to handle this.
