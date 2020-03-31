@@ -29,12 +29,12 @@ This app is designed to allow you to further develop your understanding of MVC, 
 	* take in a title, body and completion using Result. similar to your completion blocks in week 3 you will need to create an extension to handle your result Error.
 	* call the ‘save’ function on your privateDB property
 	* create a CKRecord called “entryRecord” using a new Entry to pass in to the save function
-	* handle your error and build your first  case on your Error extension
+	* handle your error and build your first case on your Error extension
 	* unwrap the record and assign it to a saved Entry record
 	* build your second case for your Error extension for not being able to unwrap
 	* add to new entry to your Source of Truth and complete with success
 * Fill in the body for your Fetch Function
-	* should only take in completion using Resutlt as a parameter
+	* should only take in completion using Result as a parameter
 	* call the ‘perform’ function on your privateDB property
 	* build your CKQuery using ‘recordType’ and ‘predicate’
 	* build your predicate using the ‘value’ parameter and setting it to ‘true’
@@ -54,10 +54,10 @@ This app is designed to allow you to further develop your understanding of MVC, 
 * On your EntryDetailView:
 	* conform to UITextFieldDelegate and call the function ‘textFieldShouldReturn’
 	* within the function call the ‘resignFirstResponder’ function on your textField and return ‘true’
-	* setup and ‘updateViews’ function takes an entry from the ‘entryReciever’ and sets the values for the textFields
+	* setup and ‘updateViews’ function takes an entry from the ‘entryReceiver’ and sets the values for the textFields
 	* handle your ‘ClearTextButtonTapped’ action similar to past Journal projects
 	* handle your ‘saveButtonTapped’ similar to previous projects, but have the ‘popViewController’ function take place on the main thread.
-	* in your ‘viewDidLoad’ call update views and assign the textField delegate
+	* in your ‘viewDidLoad’ call 'updateViews' and assign the textField delegate
 	* in your entryReceiver, use a did set to call ‘updateViews’ on the main thread.
 * On your EntryTableView:
 	* create an ‘updateViews’ function that accesses the main thread and adds the ‘reloadData’ function to the queue
