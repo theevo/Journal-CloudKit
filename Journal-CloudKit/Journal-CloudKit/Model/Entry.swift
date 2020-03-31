@@ -56,7 +56,7 @@ extension CKRecord {
     convenience init(entry: Entry) {
         self.init(recordType: EntryStrings.recordTypeKey)
         
-        self.setValue(entry.title, forKey: EntryStrings.bodyKey)
+        self.setValue(entry.title, forKey: EntryStrings.titleKey)
         self.setValue(entry.body, forKey: EntryStrings.bodyKey)
         self.setValue(entry.timestamp, forKey: EntryStrings.timestampKey)
     }

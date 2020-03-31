@@ -19,7 +19,7 @@ class EntryController {
     
     // MARK: - CRUD
     
-    func saveEntry(title: String, body: String, completion: @escaping (Bool) -> Void) {
+    func saveEntry(title: String, body: String, completion: @escaping (Result<Entry?,EntryError>) -> Void) {
         
         let entry = Entry(title: title, body: body)
         
@@ -28,20 +28,21 @@ class EntryController {
         privateDB.save(record) { (record, error) in
             if let error = error {
                 print(error, error.localizedDescription)
-                return completion(false)
+                return completion(.failure(.thrown(error)))
             }
             
             guard let record = record,
                 let entry = Entry(ckRecord: record) else
-            { return completion(false) }
+            { return completion(.failure(.recordFailedToUnwrap)) }
             
             self.entries.append(entry) // Alternative
             
-            return completion(true)
+            return completion(.success(entry))
         }
-    } // end saveHype
+    } // end saveEntry
     
-    func fetchAllHypes(completion: @escaping (Bool) -> Void) {
+    
+    func fetchAllEntries(completion: @escaping (Result<[Entry]?,EntryError>) -> Void) {
         
         
         let predicate = NSPredicate(value: true)
@@ -52,16 +53,17 @@ class EntryController {
             
             if let error = error {
                 print(error, error.localizedDescription)
-                return completion(false)
+                return completion(.failure(.thrown(error)))
             }
             
-            guard let records = records else { return completion(false) }
+            guard let records = records else {
+                return completion(.failure(.noRecords)) }
             
-            let entries: [Entry] = records.compactMap { Entry(ckRecord: $0) }
+            let entries = records.compactMap({ Entry(ckRecord: $0) })
             
             self.entries = entries
-            return completion(true)
+            return completion(.success(entries))
         }
         
-    } // end fetchAllHypes
-}
+    } // end fetchAllEntries
+} // EntryController
